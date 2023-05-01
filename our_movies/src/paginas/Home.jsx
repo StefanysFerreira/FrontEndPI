@@ -15,12 +15,18 @@ const Home =() => {
     };
 
     useEffect(() => {
-        const topRatedUrl = `${moviesURL}top_rated${apiKey}`
+        const topRatedUrl = `${moviesURL}top_rated${apiKey}`;
 
-        getTopRatedMovies(topRatedUrl)
-    }, [])
+        getTopRatedMovies(topRatedUrl);
+    }, []);
 
-    return <div>Home</div>;
+    return (<div className="container">
+              <h2 className="title">Melhores Filmes:</h2>
+              <div className="movies-container">
+                {topMovies && topMovies.map((movie) => <p>{movie.title}</p>)}
+              </div>
+            </div>
+    );
 };
 
 export default Home;
