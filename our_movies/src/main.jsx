@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 
 import App from './App.jsx'
-
+import Home from './paginas/Home.jsx'
+import Movie from './paginas/Movie.jsx'
+import Search from './paginas/Search.jsx'
 
 import './index.css'
 
